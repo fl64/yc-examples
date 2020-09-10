@@ -1,0 +1,14 @@
+#cloud-config
+disable_root: true
+timezone: Europe/Moscow
+repo_update: true
+
+apt:
+  sources:
+    docker.list:
+      source: "deb [arch=amd64] https://download.docker.com/linux/ubuntu $RELEASE stable"
+      keyid: 0EBFCD88
+
+packages:
+  - tmux
+  - docker-ce
